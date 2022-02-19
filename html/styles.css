@@ -46,20 +46,20 @@ body {
     border-left: 4px solid #1ca800;
 }
 
-.infomacao-icon::before {
+.informacao-icon::before {
     font-family: "Font Awesome 5 Free";
     content: "\f05a";
     color: #1c77ff;
 }
 
-.infomacao {
+.informacao {
     background-color: rgba(25, 25, 27, 0.8);
     color: #fff;
     box-shadow: 0 0 40px #00000069;
     padding: 5px 5px 5px 5px;
 }
 
-.infomacao-border {
+.informacao-border {
     border-left: 4px solid #1c77ff;
 }
 

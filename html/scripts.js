@@ -35,13 +35,13 @@ $(function () {
                 $(`.notification_main-${number}`).addClass('sucesso-icon')
                 $(`.wrapper-${number}`).addClass('sucesso')
                 sound.play();
-            } else if (event.data.type == 'infomacao') {
+            } else if (event.data.type == 'informacao') {
                 $(`.title-${number}`).html(event.data.title).css({
                     "font-size": "16px",
                     "font-weight": "600"
                 })
-                $(`.notification_main-${number}`).addClass('infomacao-icon')
-                $(`.wrapper-${number}`).addClass('infomacao')
+                $(`.notification_main-${number}`).addClass('informacao-icon')
+                $(`.wrapper-${number}`).addClass('informacao')
                 sound.play();
             } else if (event.data.type == 'erro') {
                 $(`.title-${number}`).html(event.data.title).css({

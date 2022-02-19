@@ -22,12 +22,12 @@ Mensagem: Mensagem da notificação (pode ser usado tags html)</br>
 Tempo: Tempo de exibição da notificação (valor em milissegundos (ms))</br>
 Tipo: Tipo de notificacão</br>
 - sucesso (verde)</br>
-- infomacao (azul)</br>
+- informacao (azul)</br>
 - erro (vermelha)</br>
 - aviso (amarela)</br>
 
 **Exemplos:**</br>
 exports['zcmg_notificacao']:Alerta("SUCCESSO", "Sistema de notificações por <span style='color:#1ca800'>ZCMG</span>!", 3000, 'sucesso')</br>
-exports['zcmg_notificacao']:Alerta("", "Sistema de notificações por <span style='color:#1c77ff'>ZCMG</span>!", 3500, 'infomacao')</br>
+exports['zcmg_notificacao']:Alerta("", "Sistema de notificações por <span style='color:#1c77ff'>ZCMG</span>!", 3500, 'informacao')</br>
 exports['zcmg_notificacao']:Alerta("ERRO", "Sistema de notificações por <span style='color:#ff1c1c'>ZCMG</span>!", 5000, 'erro')</br>
 exports['zcmg_notificacao']:Alerta("Aviso", "Sistema de notificações por ZCMG",4000, 'aviso')

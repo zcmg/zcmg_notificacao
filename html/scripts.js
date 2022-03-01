@@ -66,17 +66,31 @@ $(function () {
                 duration: 750,
                 easing: 'spring(5, 100, 35, 10)',
             })
-            setTimeout(function () {
-                anime({
-                    targets: `.wrapper-${number}`,
-                    translateX: -500,
-                    duration: 750,
-                    easing: 'spring(5, 80, 5, 0)'
-                })
+            if (event.data.time === "ligada"){
+                ligada=number
+            }else{
                 setTimeout(function () {
-                    $(`.wrapper-${number}`).remove()
-                }, 750)
-            }, event.data.time)
-        }
+                    anime({
+                        targets: `.wrapper-${number}`,
+                        translateX: -500,
+                        duration: 750,
+                        easing: 'spring(5, 80, 5, 0)'
+                    })
+                    setTimeout(function () {
+                        $(`.wrapper-${number}`).remove()
+                    }, 750)
+                }, event.data.time)
+            }
+        }else if(event.data.action == 'desligar'){
+            anime({
+                targets: `.wrapper-${ligada}`,
+                translateX: -500,
+                duration: 750,
+                easing: 'spring(5, 80, 5, 0)'
+            })
+            setTimeout(function () {
+                $(`.wrapper-${ligada}`).remove()
+            }, 750)
+        }        
     })
 })

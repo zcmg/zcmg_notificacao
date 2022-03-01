@@ -4,7 +4,7 @@ game 'gta5'
 
 author 'zcmg'
 description 'https://github.com/zcmg'
-version '1.0'
+version '1.1'
 
 ui_page 'html/ui.html'
 

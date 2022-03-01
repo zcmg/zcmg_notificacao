@@ -43,11 +43,10 @@ desligada - Permite desligar a notificação
 
 **Exemplo:**</br>
 
-Para ligar
+Para ligar </br>
 exports['zcmg_notificacao']:Alerta("SUCESSO", "Sistema de notificações por <span style='color:#1ca800'>ZCMG</span>!", 'ligada', 'sucesso')
 
-Para desligar
-
+Para desligar</br>
 exports['zcmg_notificacao']:Alerta("", "", 'desligada', '')
 
 

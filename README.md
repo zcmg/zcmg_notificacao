@@ -38,7 +38,7 @@ exports['zcmg_notificacao']:Alerta("Aviso", "Sistema de notificações por ZCMG"
 Permite deixa uma notificão sempre fixa até ser desligada. Apenas uma notificação fixa. Para isso basta na variavel do **Tempo**
 
 **Tempo:**</br>
-ligada- Permite ligar a notificação
+ligada- Permite ligar a notificação</br>
 desligada - Permite desligar a notificação 
 
 **Exemplo:**</br>

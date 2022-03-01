@@ -31,3 +31,24 @@ exports['zcmg_notificacao']:Alerta("SUCCESSO", "Sistema de notificações por <s
 exports['zcmg_notificacao']:Alerta("", "Sistema de notificações por <span style='color:#1c77ff'>ZCMG</span>!", 3500, 'informacao')</br>
 exports['zcmg_notificacao']:Alerta("ERRO", "Sistema de notificações por <span style='color:#ff1c1c'>ZCMG</span>!", 5000, 'erro')</br>
 exports['zcmg_notificacao']:Alerta("Aviso", "Sistema de notificações por ZCMG",4000, 'aviso')
+
+
+**V1.1**</br>
+**Notificação fixa**</br>
+Permite deixa uma notificão sempre fixa até ser desligada. Apenas uma notificação fixa. Para isso basta na variavel do **Tempo**
+
+**Tempo:**</br>
+ligada- Permite ligar a notificação
+desligada - Permite desligar a notificação 
+
+**Exemplo:**</br>
+
+Para ligar
+exports['zcmg_notificacao']:Alerta("SUCESSO", "Sistema de notificações por <span style='color:#1ca800'>ZCMG</span>!", 'ligada', 'sucesso')
+
+Para desligar
+
+exports['zcmg_notificacao']:Alerta("", "", 'desligada', '')
+
+
+

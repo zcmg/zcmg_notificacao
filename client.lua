@@ -38,7 +38,7 @@ RegisterCommand('notificacoes', function()
 
     exports['zcmg_notificacao']:Alerta("ERRO", "Sistema de notificações por <span style='color:#ff1c1c'>ZCMG</span>!", 5000, 'erro')
 
-    exports['zcmg_notificacao']:Alerta("Aviso", "Sistema de notificações por ZCMG",4000, 'aviso')
+    exports['zcmg_notificacao']:Alerta("Aviso", "Sistema de notificações por ZCMG", 40000, 'aviso')
 end)
 
 

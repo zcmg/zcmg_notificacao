@@ -12,9 +12,11 @@ $(function () {
                         ${event.data.message}
                     </div>
                 </div>
+                <div class="barra-${number}"></div>
             </div>`)
+           
             $(`.wrapper-${number}`).css({
-                "margin-bottom": "10px",
+                "margin-bottom": "1px",
                 "width": "300px",
                 "margin": "0 0 8px -180px",
                 "border-radius": "15px",
@@ -22,10 +24,28 @@ $(function () {
                 "border-style": "inset",
                 "border-width": "1px"
             })
+
             $('.notification_main-'+number).addClass('main')
             $('.text-'+number).css({
                 "font-size": "14px"
             })
+            
+            if (event.data.time != "ligada"){
+                    /* muda style da barra */
+                $(`.barra-${number}`).css({
+                    "width": "0%",
+                    "height": "4px",
+                    "margin-bottom": "0.7px",
+                    "border-radius": "13px",
+                    "margin-left": "15px",
+                    "background-color": "#ffffffc9",
+                    "animation-duration": event.data.time+"ms",
+                    "animation-name": "progress-bar",
+                    "animation-timing-function": "linear"
+                })
+            }
+
+
 
             if (event.data.type == 'sucesso') {
                 $(`.title-${number}`).html(event.data.title).css({

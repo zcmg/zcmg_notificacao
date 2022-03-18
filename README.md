@@ -1,7 +1,7 @@
 **FiveM ESX Script**
 
 <div align="center">
-<img src="https://user-images.githubusercontent.com/88593228/154800245-733a5322-febc-445c-a26e-08b97d74e8df.png" />
+<img src="https://cdn.discordapp.com/attachments/859508698879885312/954192451642470430/ezgif-5-4b862f5a4c.gif" />
 </div>
 
 Sistema de notificações
@@ -35,7 +35,7 @@ exports['zcmg_notificacao']:Alerta("Aviso", "Sistema de notificações por ZCMG"
 
 **V1.1**</br>
 **Notificação fixa**</br>
-Permite deixa uma notificão sempre fixa até ser desligada. Apenas uma notificação fixa. Para isso basta na variavel do **Tempo**
+Permite deixa uma notificacão sempre fixa até ser desligada. Apenas uma notificação fixa. Para isso basta na variável do **Tempo**
 
 **Tempo:**</br>
 ligada- Permite ligar a notificação</br>

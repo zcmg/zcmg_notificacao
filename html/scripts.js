@@ -31,11 +31,10 @@ $(function () {
             })
             
             if (event.data.time != "ligada"){
-                    /* muda style da barra */
                 $(`.barra-${number}`).css({
                     "width": "0%",
                     "height": "4px",
-                    "margin-bottom": "0.7px",
+                    "margin-bottom": "8px",
                     "border-radius": "13px",
                     "margin-left": "15px",
                     "background-color": "#ffffffc9",

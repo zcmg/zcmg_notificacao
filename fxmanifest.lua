@@ -1,15 +1,17 @@
-fx_version 'adamant'
+fx_version 'cerulean'
+games { 'gta5' }
 
-game 'gta5'
-
-author 'zcmg'
-description 'https://github.com/zcmg'
-version '1.2.2'
+author 'zcmg#5307'
+description 'v1.3'
 
 ui_page 'html/ui.html'
 
 client_scripts {
-	'client.lua',
+	'client.lua'
+}
+
+server_scripts {
+	'server.lua'
 }
 
 files {

@@ -8,7 +8,7 @@ Sistema de notificações
 
 Desenvolvido por: **zcmg#5307**
 
-**Como usar:**
+## Como usar
 
 **Ficheiros client:**</br>
 exports['zcmg_notificacao']:Alerta("Título", "Mensagem", Tempo, 'Tipo')

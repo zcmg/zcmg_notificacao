@@ -3,32 +3,52 @@ $(function () {
     sound.volume = 1.0;
     window.addEventListener('message', function (event) {
         if (event.data.action == 'open') {
-            var number = Math.floor((Math.random() * 1000) + 1);
-            $('.toast').append(`
-            <div class="wrapper-${number}">
-                <div class="notification_main-${number}">
-                    <div class="title-${number}"></div>
-                    <div class="text-${number}">
-                        ${event.data.message}
-                    </div>
-                </div>
-                <div class="barra-${number}"></div>
-            </div>`)
-           
-            $(`.wrapper-${number}`).css({
-                "margin-bottom": "1px",
-                "width": "300px",
-                "margin": "0 0 8px -180px",
-                "border-radius": "15px",
-                "border-color": "rgba(255, 255, 255, 0.2)",
-                "border-style": "inset",
-                "border-width": "1px"
-            })
+            let animaentrar = 'spring(5, 100, 35, 10)'
+            let animasair = 'spring(5, 80, 5, 0)'
+            var xentrar = 195
+            var xsair = -500 
 
-            $('.notification_main-'+number).addClass('main')
-            $('.text-'+number).css({
-                "font-size": "14px"
-            })
+
+            if (event.data.align == 'direita'){
+                $(`.noty`).css({
+                    "float": "right"
+                })
+
+                animaentrar = 'spring(1, 70, 100, 10)'
+                animasair = 'spring(1, 80, 100, 0)'
+                xentrar = -50
+                xsair = 500
+            }
+
+            var number = Math.floor((Math.random() * 1000) + 1);
+            if (event.data.static != 'desligar'){
+                $('.noty').append(`
+                <div class="wrapper-${number}">
+                    <div class="notification_main-${number}">
+                        <div class="title-${number}"></div>
+                        <div class="text-${number}">
+                            ${event.data.message}
+                        </div>
+                    </div>
+                    <div class="barra-${number}"></div>
+                </div>`)
+
+           
+                $(`.wrapper-${number}`).css({
+                    "margin-bottom": "1px",
+                    "width": "300px",
+                    "margin": "0 0 8px -180px",
+                    "border-radius": "15px",
+                    "border-color": "rgba(255, 255, 255, 0.2)",
+                    "border-style": "inset",
+                    "border-width": "1px"
+                })
+
+                $('.notification_main-'+number).addClass('main')
+                $('.text-'+number).css({
+                    "font-size": "14px"
+                })
+            }
             
             if (event.data.time != "ligada"){
                 $(`.barra-${number}`).css({
@@ -43,9 +63,6 @@ $(function () {
                     "animation-timing-function": "linear"
                 })
             }
-
-
-
             if (event.data.type == 'sucesso') {
                 $(`.title-${number}`).html(event.data.title).css({
                     "font-size": "16px",
@@ -81,9 +98,9 @@ $(function () {
             }
             anime({
                 targets: `.wrapper-${number}`,
-                translateX: 195,
+                translateX: xentrar,
                 duration: 750,
-                easing: 'spring(5, 100, 35, 10)',
+                easing: `${animaentrar}`,
             })
             if (event.data.time === "ligada"){
                 ligada=number
@@ -91,25 +108,26 @@ $(function () {
                 setTimeout(function () {
                     anime({
                         targets: `.wrapper-${number}`,
-                        translateX: -500,
+                        translateX: xsair,
                         duration: 750,
-                        easing: 'spring(5, 80, 5, 0)'
+                        easing: `${animasair}`
                     })
                     setTimeout(function () {
                         $(`.wrapper-${number}`).remove()
                     }, 750)
                 }, event.data.time)
             }
-        }else if(event.data.action == 'desligar'){
-            anime({
-                targets: `.wrapper-${ligada}`,
-                translateX: -500,
-                duration: 750,
-                easing: 'spring(5, 80, 5, 0)'
-            })
-            setTimeout(function () {
-                $(`.wrapper-${ligada}`).remove()
-            }, 750)
-        }        
+            if(event.data.static == 'desligar'){
+                anime({
+                    targets: `.wrapper-${ligada}`,
+                    translateX: xsair,
+                    duration: 750,
+                    easing: `${animasair}`
+                })
+                setTimeout(function () {
+                    $(`.wrapper-${ligada}`).remove()
+                }, 750)
+            }   
+        }     
     })
 })

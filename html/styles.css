@@ -4,7 +4,7 @@ body {
     overflow: hidden;
 }
 
-.toast {
+.noty {
     width: 100px;
     float: left;
 }
@@ -90,11 +90,11 @@ body {
     box-shadow: inset 0 0 5px #000000;
 }
 
-.shine {
+/* .shine {
     border-color: #1c77ff;
     border-width: 3px;
     border-style: solid;
-  }
+  } */
 
 @keyframes progress-bar {
     0%    { width: 90%; }

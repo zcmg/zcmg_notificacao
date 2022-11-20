@@ -3,18 +3,17 @@ $(function () {
     sound.volume = 1.0;
     window.addEventListener('message', function (event) {
         if (event.data.action == 'open') {
-            let animaentrar = 'spring(5, 100, 35, 10)'
+            let animaentrar = 'spring(3, 100, 35, 10)'
             let animasair = 'spring(5, 80, 5, 0)'
             var xentrar = 195
             var xsair = -500 
-
 
             if (event.data.align == 'direita'){
                 $(`.noty`).css({
                     "float": "right"
                 })
 
-                animaentrar = 'spring(1, 70, 100, 10)'
+                animaentrar = 'spring(3, 30, 35, 10)'
                 animasair = 'spring(1, 80, 100, 0)'
                 xentrar = -50
                 xsair = 500

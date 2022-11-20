@@ -1,3 +1,3 @@
 Config = {}
 
-Config.Alinhamento = "esquerda" -- esquerda/direita
+Config.Alinhamento = "direita" -- esquerda/direita

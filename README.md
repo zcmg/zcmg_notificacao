@@ -1,5 +1,9 @@
 **FiveM ESX Script**
 
+Descontinuado -> Substituído por:
+
+https://esxdeveloperportugal.tebex.io/package/5443056
+
 <div align="center">
 <img src="https://cdn.discordapp.com/attachments/859508698879885312/954192451642470430/ezgif-5-4b862f5a4c.gif" />
 </div>
